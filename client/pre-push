@@ -1,0 +1,11 @@
+#!/bin/sh
+#!/bin/sh/env python
+
+res=`sh gitlab/pre-push.sh`
+echo $res
+
+if [[ ${res,,} =~ 'true' ]];then
+	exit 0
+else
+	exit 1
+fi

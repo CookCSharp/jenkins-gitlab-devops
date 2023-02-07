@@ -1,0 +1,14 @@
+#!/bin/bash
+
+res=`sh gitlab/pre-commit.sh`
+echo $res
+
+if [[ ${res,,} =~ 'true' ]];then
+	exit 0
+elif [[ ${res,,} =~ 'none' ]];then
+	exit 0
+elif [[ ${res,,} =~ 'conflict' ]];then
+	exit 1
+else
+	exit 1
+fi

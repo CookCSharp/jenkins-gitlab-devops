@@ -1,0 +1,29 @@
+{
+    "MR": {
+        "assignee_id": 3,
+        "assignee_ids": [
+            1,
+            3
+        ],
+        "reviewer_id": 3
+    },
+    "Project": {
+        "name": "Project Name",
+        "target_repo": "Target SSH Url",
+        "default_branch" : "master",
+        "dotnet_solution_path": "dotnet/dotnet.sln",
+        "dotnet_build_cmd": "dotnet build ${file_path} -c Release",
+        "cpp_solution_path": "cpp/cpp.c",
+        "cpp_build_cmd": "cmake -G 'MinGW Makefiles' .. && make -j",
+        "python_solution_path": "python/python.py",
+        "python_build_cmd": "python ${file_path}"
+    },
+    "EmailTo": [
+        "chance.zheng@rndncatest.com"
+    ],
+    "EmailCc":[
+        "gitlab@rndncatest.com",
+        "tilly.hu@rndncatest.com",
+        "sw-sys-team@rndncatest.com"
+    ]
+}
